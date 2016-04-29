@@ -1,0 +1,14 @@
+<?php
+/** Customer's country Widget block */
+?>
+
+<label for="<?php echo $this->getFieldId('customer_country')?>"<?php if ($this->isRequired()) echo ' class="required"' ?>><?php if ($this->isRequired()) echo '<em>*</em>' ?><?php echo $this->__('Customer Country') ?></label>
+<div class="input-box">
+    <select id="<?php echo $this->getFieldId('customer_country')?>" name="<?php echo $this->getFieldName('customer_country')?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Customer Country')) ?>"<?php if ($this->isRequired()):?> class="validate-select"<?php endif; ?> <?php echo $this->getFieldParams() ?>>
+        <?php $options = Mage::getResourceSingleton('customer/customer')->getAttribute('customer_country')->getSource()->getAllOptions(true);?>
+        <?php $value = $this->getCustomerCountry();?>
+        <?php foreach ($options as $option):?>
+            <option value="<?php echo $option['value'] ?>"<?php if ($option['value'] == $value) echo ' selected="selected"' ?>><?php echo $option['label'] ?></option>
+        <?php endforeach;?>
+    </select>
+</div>

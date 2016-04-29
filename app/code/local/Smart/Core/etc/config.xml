@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Smart Core
+ *
+ * @author      Pavel Panchyshnyy
+ * @category    code
+ * @codePool    local
+ */
+-->
+<config>
+    <modules>
+        <Smart_Core>
+            <version>0.0.1</version>
+        </Smart_Core>
+    </modules>
+
+    <global>
+        <blocks>
+            <smart>
+                <class>Smart_Core_Block</class>
+            </smart>
+            <directory>
+                <rewrite>
+                    <currency>Smart_Core_Block_Directory_Currency</currency>
+                </rewrite>
+            </directory>
+        </blocks>
+    </global>
+</config>

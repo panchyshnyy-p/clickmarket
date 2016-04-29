@@ -1,0 +1,6 @@
+/.idea/
+/pmip
+/var/*
+!/var/package
+/media/catalog/product/cache
+/skin/frontend/smart/theme/scss/.sass-cache

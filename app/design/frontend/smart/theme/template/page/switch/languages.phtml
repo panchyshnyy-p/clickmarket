@@ -1,0 +1,37 @@
+<?php
+/**
+ * Smart Theme
+ *
+ * @author      Pavel Panchyshnyy
+ * @category    design
+ * @package     smart_theme
+ */
+?>
+<?php
+/**
+ * Language switcher template
+ *
+ * @see Mage_Page_Block_Switch
+ */
+?>
+<?php if (count($this->getStores()) > 1): ?>
+    <div class="header-form language">
+        <div class="title" title="<?php echo $this->__('Select Language')?>">
+        <span>
+            <?php echo $this->__('Language: ') ?>
+            <span class="current"><?php echo $this->getCurrentStoreCode() ?></span>
+        </span>
+            <span class="mobile-close"></span>
+        </div>
+        <ul class="switch-options">
+            <?php foreach ($this->getStores() as $_lang): ?>
+                <?php if ($_lang->getId() == $this->getCurrentStoreId()) {
+                    continue;
+                } ?>
+                <li class="switcher" onclick="setLocation('<?php echo $_lang->getCurrentUrl() ?>')">
+                    <span><?php echo $this->escapeHtml($_lang->getCode()) ?></span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
