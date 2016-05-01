@@ -68,10 +68,6 @@
                 <li><?php echo $_gender->setGender($this->getFormData()->getGender())->toHtml() ?></li>
             <?php endif ?>
 
-
-            <?php $_country = $this->getLayout()->createBlock('bswift/widget_country') ?>
-            <li><?php echo $_country->setCustomerCountry($this->getFormData()->getCustomerCountry())->toHtml() ?></li>
-
             <?php if($this->getShowAddressFields()): ?>
                 <li class="hidden">
                     <input type="hidden" name="create_address" value="1" />

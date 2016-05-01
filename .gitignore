@@ -3,4 +3,5 @@
 /var/*
 !/var/package
 /media/catalog/product/cache
+/skin/frontend/smart/theme/scss/fonts-awesome/scss/.sass-cache
 /skin/frontend/smart/theme/scss/.sass-cache

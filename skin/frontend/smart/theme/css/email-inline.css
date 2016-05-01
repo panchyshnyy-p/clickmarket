@@ -1,3 +1,6 @@
+@font-face {
+  font-family: 'Architects Daughter', cursive, sans-serif;
+  src: url(../fonts/ArchitectsDaughter.ttf); }
 /*
 // ----------------------------------------------
 // Usage example:
@@ -685,7 +688,7 @@ p.sku {
 /* line 600, ../scss/email-inline.scss */
 .price-box {
   margin: 7px 0;
-  font-family: "Helvetica Neue", Verdana, Arial, sans-serif; }
+  font-family: "Architects Daughter", cursive, sans-serif; }
 
 /* line 605, ../scss/email-inline.scss */
 .price-box p {
@@ -703,13 +706,13 @@ p.sku {
 /* line 618, ../scss/email-inline.scss */
 .price-box .price,
 .price {
-  font-family: "Helvetica Neue", Verdana, Arial, sans-serif; }
+  font-family: "Architects Daughter", cursive, sans-serif; }
 
 /* line 623, ../scss/email-inline.scss */
 .price-box .price-label {
   color: #A0A0A0;
   white-space: nowrap;
-  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif; }
+  font-family: "Architects Daughter", cursive, sans-serif; }
 
 /* line 629, ../scss/email-inline.scss */
 .price-box .minimal-price-link {

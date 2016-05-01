@@ -31,7 +31,7 @@
  * Skip Link - Account
  */
 
-.skip-account {
+.hover-wrapper.account .hover-link {
     .icon {
       background: url('../images/user.png') no-repeat;
       background-size: 30px 30px;
@@ -63,37 +63,5 @@
         right: 115px;
         width: 200px;
     }
-
-    #header-account a {
-        display: block;
-        padding: 5px 10px;
-        color: $c-text;
-        line-height: 2;
-    }
-
-    #header-account a:hover {
-        color: $c-action;
-    }
-
-}
-
-/* -------------------------------------------- *
- * Account Links
- */
-
-#header-account {
-    padding: 5px 0;
-}
-
-#header-account a {
-    position: relative;
-    display: block;
-    padding: 5px 10px;
-    line-height:23px;
-    text-align: center;
-}
-
-#header-account a:hover {
-    color: $c-action;
 }
 

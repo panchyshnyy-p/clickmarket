@@ -31,43 +31,44 @@
  * Skip Link - Cart
  */
 
-.skip-cart {
-    &:not(.skip-active):hover {
-        .icon {
-            background-position: -50px (-100px + ($toolbar-icon-padding-offset/2) + 1px);
-        }
-    }
 
-    .icon {
-        @extend .icon-sprite;
-        background-position: -0px (-100px + ($toolbar-icon-padding-offset/2) + 1px);
+
+.header-minicart-wrapper {
+  position: relative;
+
+  .skip-link {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    margin: $trim-small;
+    width: 100px;
+    height: 50px;
+  }
+
+  .header-minicart-content {
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    z-index: 999;
+    display: block;
+    padding: $trim-small;
+    border: 1px solid $c-sweet-white-hover;
+    background-color: $c-sweet-white;
+    @include transform(scale(0));
+    @include transition(all 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955));
+    @include transform-origin(100%, 0, false);
+  }
+
+  &:hover {
+
+    .header-minicart-content {
+      @include transform(scale(1));
     }
+  }
 }
 
 // ---------------------------------------------
-
-@include bp(min-width, $bp-medium + 1) {
-
-    .skip-cart {
-        width: auto;
-        padding: 0 10px;
-    }
-
-    .skip-cart:hover {
-    }
-
-    #header-cart.skip-active {
-        @include menu;
-        display: block;
-        position: absolute;
-        z-index: 200;
-        top: 40px;
-        right: 0;
-        width: 320px;
-        background: white;
-    }
-
-}
 
 /* -------------------------------------------- *
  * Skip Cart Notifier

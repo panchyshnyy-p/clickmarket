@@ -34,8 +34,8 @@ $default-border-radius: 5px;
 // Transition
 
 $default-transition-property: all;
-$default-transition-duration: 200ms;
-$default-transition-function: linear;
+$default-transition-duration: 300ms;
+$default-transition-function: ease;
 $default-transition-delay: 0;
 
 // =============================================
@@ -130,6 +130,7 @@ $c-warn-background: #F9EBE6;
 
 $c-dark: #676157;
 $c-sweet-white: #EEE8FF;
+$c-sweet-white-hover: darken($c-sweet-white, 3%);
 
 // Global Elements
 
@@ -221,10 +222,14 @@ $c-email-highlighted-border: #FFF74C;
 // Google Web Font stylesheet is included via layout XML
 
 // Font Stacks
+@font-face {
+  font-family: 'Architects Daughter', cursive, sans-serif;
+  src: url(../fonts/ArchitectsDaughter.ttf);
+}
 
-$f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-sans: 'Architects Daughter', cursive, sans-serif;
 $f-stack-serif: Georgia, Times, 'Times New Roman', serif;
-$f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-special: 'Architects Daughter', cursive, sans-serif;
 
 $f-stack-default: $f-stack-sans;
 

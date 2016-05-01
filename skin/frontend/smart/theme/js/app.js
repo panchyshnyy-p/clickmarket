@@ -696,44 +696,31 @@ $j(document).ready(function () {
     // Skip Links
     // =============================================
 
-    var skipContents = $j('.skip-content');
-    var skipLinks = $j('.skip-link');
-
-    skipLinks.on('click', function (e) {
-        e.preventDefault();
-
-        var self = $j(this);
-        // Use the data-target-element attribute, if it exists. Fall back to href.
-        var target = self.attr('data-target-element') ? self.attr('data-target-element') : self.attr('href');
-
-        // Get target element
-        var elem = $j(target);
-
-        // Check if stub is open
-        var isSkipContentOpen = elem.hasClass('skip-active') ? 1 : 0;
-
-        // Hide all stubs
-        skipLinks.removeClass('skip-active');
-        skipContents.removeClass('skip-active');
-
-        // Toggle stubs
-        if (isSkipContentOpen) {
-            self.removeClass('skip-active');
-        } else {
-            self.addClass('skip-active');
-            elem.addClass('skip-active');
-        }
-    });
-
-    $j('#header-cart').on('click', '.skip-link-close', function(e) {
-        var parent = $j(this).parents('.skip-content');
-        var link = parent.siblings('.skip-link');
-
-        parent.removeClass('skip-active');
-        link.removeClass('skip-active');
-
-        e.preventDefault();
-    });
+    //var skipContents = $j('.skip-content');
+    //var skipLinks = $j('.skip-link');
+    //
+    //skipLinks.on('click', function (e) {
+    //    e.preventDefault();
+    //
+    //    var self = $j(this);
+    //    // Use the data-target-element attribute, if it exists. Fall back to href.
+    //    var target = self.attr('data-target-element') ? self.attr('data-target-element') : self.attr('href');
+    //
+    //    // Get target element
+    //    var elem = $j(target);
+    //
+    //    elem.slideToggle();
+    //});
+    //
+    //$j('#header-cart').on('click', '.skip-link-close', function(e) {
+    //    var parent = $j(this).parents('.skip-content');
+    //    var link = parent.siblings('.skip-link');
+    //
+    //    parent.removeClass('skip-active');
+    //    link.removeClass('skip-active');
+    //
+    //    e.preventDefault();
+    //});
 
 
     // ==============================================
