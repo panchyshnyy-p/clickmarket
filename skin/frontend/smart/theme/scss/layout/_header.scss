@@ -71,7 +71,9 @@
 
 .header-form {
   padding: $gap 5px;
-  border-bottom: 1px solid $c-white;
+  border-bottom: 1px solid $c-nav-2-level-text;
+  color: $c-nav-2-level-text;
+  @include transition(background 0.5s linear);
 
   .switch-options {
     position: absolute;
@@ -80,7 +82,7 @@
     opacity: 0;
     width: 100px;
     z-index: 999;
-    background-color: $c-original-white;
+    background-color: $c-nav-2-level;
     @include transition($default-transition-property $default-transition-duration ease);
     @include box-shadow(0 4px 9px rgba(0,0,0,.12));
 
@@ -89,13 +91,15 @@
       display: block;
       text-align: center;
       padding: $element-spacing;
+      @include transition($default-transition-property 0.5s ease);
 
       span {
         text-transform: uppercase;
       }
 
-      &:hover span {
-        color: $c-button-hover;
+      &:hover {
+        background-color: $c-nav-2-level-hover;
+        color: $c-original-white;
       }
     }
   }
@@ -104,6 +108,7 @@
     cursor: pointer;
     text-align: left;
     position: relative;
+    margin-left: 15px;
 
     .current {
       text-transform: uppercase;
@@ -123,13 +128,13 @@
   }
 
   &:hover {
-    border-bottom-color: $c-button-hover;
-    background-color: $c-sweet-white-hover;
+    border-bottom-color: $c-original-white;
+    background-color: $c-nav-2-level-hover;
 
     .title {
       @include transition($default-transition-property .3s ease);
       @include transform(translateX(7px));
-      color: $c-blue;
+      color: $c-original-white;
     }
 
     .switch-options {
@@ -206,7 +211,7 @@
     min-height: 44px;
     text-align: center;
     padding: $gap + 5px $gap;
-    margin: 0 auto;
+    margin: 0 50px auto;
 
     img {
         max-width: 100%;
@@ -249,13 +254,16 @@
 @include bp(min-width, $bp-medium + 1) {
 
     .hover-links {
+        margin-top: 50px;
         border: 0;
     }
 
 }
 
-/* -------------------------------------------- *
- * Hover - Link
+/*
+ * -------------------------------------------- *
+ * Hover Wrapper Content
+ * -------------------------------------------- *
  */
 
 .hover-wrapper .hover-content {
@@ -266,12 +274,12 @@
   opacity: 0;
   width: $max-header-content-width;
   z-index: 999;
-  background-color: $c-original-white;
+  background-color: $c-nav-2-level;
+  height: 100%;
   @include transition($default-transition-property $default-transition-duration ease);
   @include box-shadow(0 4px 9px rgba(0, 0, 0, .12));
 
   li {
-    cursor: pointer;
     display: block;
     text-align: center;
     padding: $gap 5px;
@@ -281,57 +289,65 @@
       text-transform: uppercase;
       text-decoration: none;
       display: inline-block;
-      color: $c-dark;
+      color: $c-nav-2-level-text;
 
       &:before {
         content: "";
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 1px;
         bottom: 0;
         left: 0;
-        background-color: $c-button-hover;
+        background-color: $c-original-white;
         visibility: hidden;
         @include transform(scaleX(0));
         @include transition(all 0.3s ease-in-out 0s);
       }
     }
 
-    &:hover a {
-      color: $c-button-hover!important;
+    &:hover {
+      cursor: pointer;
+      background-color: $c-nav-2-level-hover;
 
-      &:before {
-        visibility: visible;
-        @include transform(scaleX(1));
+      a {
+        color: $c-original-white!important;
+
+        &:before {
+          visibility: visible;
+          @include transform(scaleX(1));
+        }
       }
     }
   }
 }
 
+/* -------------------------------------------- *
+ * Hover Wrapper Links
+ */
+
 .hover-wrapper {
   padding: $gap;
   border-bottom: 1px solid $c-white;
-  cursor: pointer;
 
   .hover-link {
     position: relative;
-    display: block;
+    display: inline-block;
     height: 25px;
+    width: 90%;
     color: $c-text;
     text-align: left;
+    margin-left: 20px;
     text-decoration: none;
 
     &:after {
-      content: '';
-      width: 25px;
-      height: 25px;
+      content: '\f054';
       display: inline-block;
       position: absolute;
-      top: 15%;
+      top: 20%;
       right: 0;
       z-index: 1000;
-      background: url('../images/arrow_right.png') no-repeat;
-      background-size: contain;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
     }
   }
 
@@ -350,6 +366,68 @@
       display: block;
       opacity: 1;
     }
+  }
+}
+
+// ---------------------------------------------
+// Hover wrapper origin
+
+.title-block {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  color: $c-sweet-white;
+
+  i {
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+  }
+
+  a:visited {
+    color: $c-sweet-white;
+  }
+
+  &:hover {
+    color: $c-sweet-white;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.hover-title-container {
+  color: $c-sweet-white;
+  height: 250px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border-bottom: 1px solid $c-sweet-white;
+  overflow: hidden;
+}
+
+/*
+ * ---------------------------------------------
+ * Hover wrapper Options directly
+ * ---------------------------------------------
+ */
+
+.hover-wrapper.options {
+
+  .title-block {
+    color: $c-hover-options;
+
+    a:visited {
+      color: $c-hover-options;
+    }
+
+    &:hover a {
+      color: $c-original-white;
+    }
+  }
+
+  .hover-title-container {
+    border-bottom: 1px solid $c-hover-options;
   }
 }
 
@@ -393,36 +471,12 @@
 
 }
 
-/* -------------------------------------------- *
- * Hover Link - Icon
- */
-
-.hover-link .icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-}
-
-.skip-link.skip-nav .icon,
-.skip-link.skip-cart:not(.no-count) .icon {
-    margin-right: 3px;
-}
-
 @include bp(min-width, 500px) {
 
     .skip-link .icon {
         margin-right: 3px;
     }
 
-}
-
-/* -------------------------------------------- *
- * Skip Link - Label
- */
-
-.skip-link .label {
-    display: none;
 }
 
 // ---------------------------------------------

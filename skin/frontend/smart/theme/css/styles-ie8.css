@@ -2717,8 +2717,13 @@ body {
 /* line 72, ../scss/layout/_header.scss */
 .header-form {
   padding: 10px 5px;
-  border-bottom: 1px solid #E6E6E6; }
-  /* line 76, ../scss/layout/_header.scss */
+  border-bottom: 1px solid #a0a0a0;
+  color: #a0a0a0;
+  -moz-transition: background 0.5s linear;
+  -o-transition: background 0.5s linear;
+  -webkit-transition: background 0.5s linear;
+  transition: background 0.5s linear; }
+  /* line 78, ../scss/layout/_header.scss */
   .header-form .switch-options {
     position: absolute;
     left: 80%;
@@ -2726,7 +2731,7 @@ body {
     opacity: 0;
     width: 100px;
     z-index: 999;
-    background-color: #FFFFFF;
+    background-color: #252525;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     -webkit-transition: all 300ms ease;
@@ -2734,28 +2739,34 @@ body {
     -moz-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12); }
-    /* line 87, ../scss/layout/_header.scss */
+    /* line 89, ../scss/layout/_header.scss */
     .header-form .switch-options li {
       cursor: pointer;
       display: block;
       text-align: center;
-      padding: 7px; }
-      /* line 93, ../scss/layout/_header.scss */
+      padding: 7px;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      /* line 96, ../scss/layout/_header.scss */
       .header-form .switch-options li span {
         text-transform: uppercase; }
-      /* line 97, ../scss/layout/_header.scss */
-      .header-form .switch-options li:hover span {
-        color: #108cb5; }
-  /* line 103, ../scss/layout/_header.scss */
+      /* line 100, ../scss/layout/_header.scss */
+      .header-form .switch-options li:hover {
+        background-color: #181818;
+        color: #FFFFFF; }
+  /* line 107, ../scss/layout/_header.scss */
   .header-form .title {
     cursor: pointer;
     text-align: left;
-    position: relative; }
-    /* line 108, ../scss/layout/_header.scss */
+    position: relative;
+    margin-left: 15px; }
+    /* line 113, ../scss/layout/_header.scss */
     .header-form .title .current {
       text-transform: uppercase;
       font-size: 15px; }
-    /* line 113, ../scss/layout/_header.scss */
+    /* line 118, ../scss/layout/_header.scss */
     .header-form .title .mobile-close {
       display: none;
       position: absolute;
@@ -2765,11 +2776,11 @@ body {
       height: 20px;
       background: url("../images/arrow-down-grey.png") no-repeat;
       background-size: 15px 15px; }
-  /* line 125, ../scss/layout/_header.scss */
+  /* line 130, ../scss/layout/_header.scss */
   .header-form:hover {
-    border-bottom-color: #108cb5;
-    background-color: #e3d9ff; }
-    /* line 129, ../scss/layout/_header.scss */
+    border-bottom-color: #FFFFFF;
+    background-color: #181818; }
+    /* line 134, ../scss/layout/_header.scss */
     .header-form:hover .title {
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
@@ -2779,14 +2790,14 @@ body {
       -ms-transform: translateX(7px);
       -webkit-transform: translateX(7px);
       transform: translateX(7px);
-      color: #129ECC; }
-    /* line 135, ../scss/layout/_header.scss */
+      color: #FFFFFF; }
+    /* line 140, ../scss/layout/_header.scss */
     .header-form:hover .switch-options {
       visibility: visible;
       display: block;
       opacity: 1; }
 
-/* line 145, ../scss/layout/_header.scss */
+/* line 150, ../scss/layout/_header.scss */
 .header-bottom {
   position: absolute;
   width: 190px;
@@ -2798,7 +2809,7 @@ body {
 /* ============================================ *
  * Logo
  * ============================================ */
-/* line 202, ../scss/layout/_header.scss */
+/* line 207, ../scss/layout/_header.scss */
 .logo {
   display: block;
   width: 65%;
@@ -2806,43 +2817,46 @@ body {
   min-height: 44px;
   text-align: center;
   padding: 15px 10px;
-  margin: 0 auto; }
-  /* line 211, ../scss/layout/_header.scss */
+  margin: 0 50px auto; }
+  /* line 216, ../scss/layout/_header.scss */
   .logo img {
     max-width: 100%; }
-  /* line 215, ../scss/layout/_header.scss */
+  /* line 220, ../scss/layout/_header.scss */
   .logo .small {
     display: block; }
-  /* line 218, ../scss/layout/_header.scss */
+  /* line 223, ../scss/layout/_header.scss */
   .logo .large {
     display: none; }
 
-/* line 223, ../scss/layout/_header.scss */
+/* line 228, ../scss/layout/_header.scss */
 .logo:hover {
   opacity: 0.8; }
 
-/* line 231, ../scss/layout/_header.scss */
+/* line 236, ../scss/layout/_header.scss */
 .logo {
   max-width: 300px;
   min-height: 90px; }
-  /* line 235, ../scss/layout/_header.scss */
+  /* line 240, ../scss/layout/_header.scss */
   .logo .small {
     display: none; }
-  /* line 238, ../scss/layout/_header.scss */
+  /* line 243, ../scss/layout/_header.scss */
   .logo .large {
     display: block; }
 
 /* ============================================ *
  * Hover Links
  * ============================================ */
-/* line 251, ../scss/layout/_header.scss */
+/* line 256, ../scss/layout/_header.scss */
 .hover-links {
+  margin-top: 50px;
   border: 0; }
 
-/* -------------------------------------------- *
- * Hover - Link
+/*
+ * -------------------------------------------- *
+ * Hover Wrapper Content
+ * -------------------------------------------- *
  */
-/* line 261, ../scss/layout/_header.scss */
+/* line 269, ../scss/layout/_header.scss */
 .hover-wrapper .hover-content {
   position: absolute;
   left: 250px;
@@ -2851,7 +2865,8 @@ body {
   opacity: 0;
   width: 250px;
   z-index: 999;
-  background-color: #FFFFFF;
+  background-color: #252525;
+  height: 100%;
   -moz-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
@@ -2859,28 +2874,27 @@ body {
   -moz-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12); }
-  /* line 273, ../scss/layout/_header.scss */
+  /* line 282, ../scss/layout/_header.scss */
   .hover-wrapper .hover-content li {
-    cursor: pointer;
     display: block;
     text-align: center;
     padding: 10px 5px; }
-    /* line 279, ../scss/layout/_header.scss */
+    /* line 287, ../scss/layout/_header.scss */
     .hover-wrapper .hover-content li a {
       position: relative;
       text-transform: uppercase;
       text-decoration: none;
       display: inline-block;
-      color: #676157; }
-      /* line 286, ../scss/layout/_header.scss */
+      color: #a0a0a0; }
+      /* line 294, ../scss/layout/_header.scss */
       .hover-wrapper .hover-content li a:before {
         content: "";
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 1px;
         bottom: 0;
         left: 0;
-        background-color: #108cb5;
+        background-color: #FFFFFF;
         visibility: hidden;
         -moz-transform: scaleX(0);
         -ms-transform: scaleX(0);
@@ -2891,47 +2905,53 @@ body {
         -webkit-transition: all 0.3s ease-in-out;
         -webkit-transition-delay: 0s;
         transition: all 0.3s ease-in-out 0s; }
-    /* line 300, ../scss/layout/_header.scss */
-    .hover-wrapper .hover-content li:hover a {
-      color: #108cb5 !important; }
-      /* line 303, ../scss/layout/_header.scss */
-      .hover-wrapper .hover-content li:hover a:before {
-        visibility: visible;
-        -moz-transform: scaleX(1);
-        -ms-transform: scaleX(1);
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1); }
+    /* line 308, ../scss/layout/_header.scss */
+    .hover-wrapper .hover-content li:hover {
+      cursor: pointer;
+      background-color: #181818; }
+      /* line 312, ../scss/layout/_header.scss */
+      .hover-wrapper .hover-content li:hover a {
+        color: #FFFFFF !important; }
+        /* line 315, ../scss/layout/_header.scss */
+        .hover-wrapper .hover-content li:hover a:before {
+          visibility: visible;
+          -moz-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1); }
 
-/* line 311, ../scss/layout/_header.scss */
+/* -------------------------------------------- *
+ * Hover Wrapper Links
+ */
+/* line 328, ../scss/layout/_header.scss */
 .hover-wrapper {
   padding: 10px;
-  border-bottom: 1px solid #E6E6E6;
-  cursor: pointer; }
-  /* line 316, ../scss/layout/_header.scss */
+  border-bottom: 1px solid #E6E6E6; }
+  /* line 332, ../scss/layout/_header.scss */
   .hover-wrapper .hover-link {
     position: relative;
-    display: block;
+    display: inline-block;
     height: 25px;
+    width: 90%;
     color: #636363;
     text-align: left;
+    margin-left: 20px;
     text-decoration: none; }
-    /* line 324, ../scss/layout/_header.scss */
+    /* line 342, ../scss/layout/_header.scss */
     .hover-wrapper .hover-link:after {
-      content: '';
-      width: 25px;
-      height: 25px;
+      content: '\f054';
       display: inline-block;
       position: absolute;
-      top: 15%;
+      top: 20%;
       right: 0;
       z-index: 1000;
-      background: url("../images/arrow_right.png") no-repeat;
-      background-size: contain; }
-  /* line 338, ../scss/layout/_header.scss */
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit; }
+  /* line 354, ../scss/layout/_header.scss */
   .hover-wrapper:hover {
     border-bottom-color: #108cb5;
     background-color: #e3d9ff; }
-    /* line 342, ../scss/layout/_header.scss */
+    /* line 358, ../scss/layout/_header.scss */
     .hover-wrapper:hover .hover-link {
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
@@ -2942,53 +2962,79 @@ body {
       -webkit-transform: translateX(7px);
       transform: translateX(7px);
       color: #129ECC; }
-    /* line 348, ../scss/layout/_header.scss */
+    /* line 364, ../scss/layout/_header.scss */
     .hover-wrapper:hover .hover-content {
       visibility: visible;
       display: block;
       opacity: 1; }
 
-/* line 374, ../scss/layout/_header.scss */
+/* line 375, ../scss/layout/_header.scss */
+.title-block {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  color: #EEE8FF; }
+  /* line 381, ../scss/layout/_header.scss */
+  .title-block i {
+    display: block;
+    text-align: center;
+    margin: 5px auto; }
+  /* line 387, ../scss/layout/_header.scss */
+  .title-block a:visited {
+    color: #EEE8FF; }
+  /* line 391, ../scss/layout/_header.scss */
+  .title-block:hover {
+    color: #EEE8FF; }
+    /* line 394, ../scss/layout/_header.scss */
+    .title-block:hover a {
+      text-decoration: none; }
+
+/* line 400, ../scss/layout/_header.scss */
+.hover-title-container {
+  color: #EEE8FF;
+  height: 250px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border-bottom: 1px solid #EEE8FF;
+  overflow: hidden; }
+
+/*
+ * ---------------------------------------------
+ * Hover wrapper Options directly
+ * ---------------------------------------------
+ */
+/* line 417, ../scss/layout/_header.scss */
+.hover-wrapper.options .title-block {
+  color: #FFBD2E; }
+  /* line 420, ../scss/layout/_header.scss */
+  .hover-wrapper.options .title-block a:visited {
+    color: #FFBD2E; }
+  /* line 424, ../scss/layout/_header.scss */
+  .hover-wrapper.options .title-block:hover a {
+    color: #FFFFFF; }
+/* line 429, ../scss/layout/_header.scss */
+.hover-wrapper.options .hover-title-container {
+  border-bottom: 1px solid #FFBD2E; }
+
+/* line 452, ../scss/layout/_header.scss */
 .skip-link {
   width: 25%; }
 
 /* -------------------------------------------- *
  * Skip Link - Active
  */
-/* -------------------------------------------- *
- * Hover Link - Icon
- */
-/* line 400, ../scss/layout/_header.scss */
-.hover-link .icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  vertical-align: middle; }
-
-/* line 407, ../scss/layout/_header.scss */
-.skip-link.skip-nav .icon,
-.skip-link.skip-cart:not(.no-count) .icon {
-  margin-right: 3px; }
-
-/* line 414, ../scss/layout/_header.scss */
+/* line 476, ../scss/layout/_header.scss */
 .skip-link .icon {
   margin-right: 3px; }
 
-/* -------------------------------------------- *
- * Skip Link - Label
- */
-/* line 424, ../scss/layout/_header.scss */
-.skip-link .label {
-  display: none; }
-
-/* line 432, ../scss/layout/_header.scss */
+/* line 486, ../scss/layout/_header.scss */
 .skip-link .label {
   display: inline; }
 
 /* ============================================ *
  * Global Header Navigation
  * ============================================ */
-/* line 469, ../scss/layout/_header.scss */
+/* line 523, ../scss/layout/_header.scss */
 .account-cart-wrapper {
   display: inline-block; }
 
@@ -3233,14 +3279,22 @@ body {
  * Header - Account
  * ============================================ */
 /* -------------------------------------------- *
- * Skip Link - Account
+ * Hover Link - Account
  */
-/* line 35, ../scss/layout/_header-account.scss */
-.hover-wrapper.account .hover-link .icon {
-  background: url("../images/user.png") no-repeat;
-  background-size: 30px 30px; }
+/* line 36, ../scss/layout/_header-account.scss */
+.hover-wrapper.account .title-block {
+  color: #00A6FF; }
+  /* line 39, ../scss/layout/_header-account.scss */
+  .hover-wrapper.account .title-block a:visited {
+    color: #00A6FF; }
+  /* line 43, ../scss/layout/_header-account.scss */
+  .hover-wrapper.account .title-block:hover a {
+    color: #EEE8FF; }
+/* line 48, ../scss/layout/_header-account.scss */
+.hover-wrapper.account .hover-title-container {
+  border-bottom: 1px solid #00A6FF; }
 
-/* line 45, ../scss/layout/_header-account.scss */
+/* line 57, ../scss/layout/_header-account.scss */
 .skip-account {
   float: none;
   width: auto;
@@ -3249,7 +3303,7 @@ body {
   padding: 0 10px;
   text-transform: uppercase; }
 
-/* line 57, ../scss/layout/_header-account.scss */
+/* line 69, ../scss/layout/_header-account.scss */
 #header-account.skip-active {
   background: #FBFBFB;
   border: solid 1px #CCCCCC;

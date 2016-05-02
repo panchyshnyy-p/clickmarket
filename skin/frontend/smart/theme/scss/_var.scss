@@ -129,8 +129,18 @@ $c-warn: #E26703;
 $c-warn-background: #F9EBE6;
 
 $c-dark: #676157;
+
+// =============================================
+// Smart - Theme
+// =============================================
 $c-sweet-white: #EEE8FF;
 $c-sweet-white-hover: darken($c-sweet-white, 3%);
+$c-nav-2-level: #252525;
+$c-nav-2-level-text: #a0a0a0;
+$c-nav-2-level-hover: darken(#252525, 5%);
+// Hover Links
+$c-account-links: #00A6FF;
+$c-hover-options: #FFBD2E;
 
 // Global Elements
 

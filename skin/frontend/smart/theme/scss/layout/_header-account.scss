@@ -28,14 +28,26 @@
  * ============================================ */
 
 /* -------------------------------------------- *
- * Skip Link - Account
+ * Hover Link - Account
  */
 
-.hover-wrapper.account .hover-link {
-    .icon {
-      background: url('../images/user.png') no-repeat;
-      background-size: 30px 30px;
+.hover-wrapper.account {
+
+  .title-block {
+    color: $c-account-links;
+
+    a:visited {
+      color: $c-account-links;
     }
+
+    &:hover a {
+      color: $c-sweet-white;
+    }
+  }
+
+  .hover-title-container {
+    border-bottom: 1px solid $c-account-links;
+  }
 }
 
 // ---------------------------------------------

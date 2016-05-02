@@ -24,20 +24,50 @@
     <div class="header-container">
         <div class="header-top">
             <div class="container">
-                <a class="logo" href="<?php echo $this->getUrl('') ?>">
-                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
-                    <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
-                </a>
+                <div class="logo">
+                    <a href="<?php echo $this->getUrl('') ?>">
+                        <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+                        <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
+                    </a>
+                </div>
                 <!-- Hover Links -->
                 <div class="hover-links">
                     <div class="hover-wrapper account">
-                        <a class="hover-link">
-                            <span class="icon"></span>
-                            <span class="label"><?php echo $this->__('Account'); ?></span>
-                        </a>
+                        <span class="hover-link" title="<?php echo $this->__('Go to My Account page')?>">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <?php echo $this->__('My Account'); ?>
+                        </span>
                         <!-- Account -->
                         <div id="header-account" class="hover-content">
+                            <div class="hover-title-container">
+                                <div class="title-block account">
+                                    <a href="<?php echo $this->helper('customer')->getAccountUrl() ?>">
+                                        <i class="fa fa-user fa-5x" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="info-message">
+                                    <?php echo $this->__('Ciklum\'s IT development process has revolutionized outsourcing by integrating our skills in IT, human resources, and administration to create better relationships with clients.')?>
+                                </div>
+                            </div>
+
                             <?php echo $this->getChildHtml('topLinks') ?>
+                        </div>
+                    </div>
+                    <div class="hover-wrapper options">
+                        <span class="hover-link">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <?php echo $this->__('Options'); ?>
+                        </span>
+                        <div class="hover-content">
+                            <div class="hover-title-container">
+                                <div class="title-block options">
+                                    <i class="fa fa-wrench fa-5x" aria-hidden="true"></i>
+                                </div>
+                                <div class="info-message">
+                                    <?php echo $this->__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')?>
+                                </div>
+                            </div>
+
                             <div class="header-select-block">
                                 <?php echo $this->getChildHtml('store_language') ?>
                                 <?php echo $this->getChildHtml('currency_switcher') ?>
